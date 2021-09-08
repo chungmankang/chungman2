@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+header{
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1000;
+}
+
+header .logo{
+    line-height: 70px;
+    float: left;
+}
+
+
+header ul{
+    float: right;
+    color: white;
+}
+
+header ul li{
+    float: left;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 0px 20px;
+}
+
+/* section1 */ 
+
+/* .section1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+} */
+
+.section1 .slide1{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main1.png) no-repeat;
+    background-position: center 0;
+}
+
+.section1 .slide2{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main2.jpg) no-repeat;
+    background-position: center;
+}
+
+.section1 .slide3{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main3.jpg) no-repeat;
+    background-position: center;
+}
+
+.section1 .text{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    color: #fff;
+    cursor: default;
+}
+
+.section1 .text h1{
+    font-size: 70px;
+}
+
+.section1 .text h1 span{
+    color: #ff7f00;
+}
+
+.section1 .text h3{
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+/* section2 */
+
+/* .section2{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+} */
+
+.section2 .sect2_img{
+    position: absolute;
+    top: 150%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.section2 .sect2_img img{
+    width: 80%;
+    height: 80%;
+}
+
+.section2 .sect2_title{
+    position: absolute;
+    top: 115%;
+    left: 70%;
+    font-size: 40px;
+}
+
+.section2 .sect2_content{
+    position: absolute;
+    top: 135%;
+    left: 65%;
+    font-size: 20px;
+}
+
+.section2 .sect2_content div{
+    margin: 20px 0px;
+}
+
+
+.section2 h2 span{
+    color: #ff7f00;
+}
+
+/* section3 */
+
+.section3{
+    /* width: 100%;
+    height: 100vh;
+    position: relative; */
+    overflow: hidden;
+}
+
+.section3 .sect3_bg{
+    width: 100%;
+    height: 450px;
+    background-color: #f0c98e;
+    position: absolute;
+    top: 230%;
+    left: 0;
+}
+
+.section3 .sect3_reco1{
+    width: 50%;
+    position: absolute;
+    top: 235%;
+    left: 0%;
+    text-align: right;
+}
+
+.section3 .sect3_reco1 .month{
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.section3 .sect3_reco1 .how{
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.section3 .sect3_reco1 .dev{
+    border: 2px solid #fff;
+    margin-bottom: 70px;
+}
+
+.section3 .sect3_reco1 .menu{
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.section3 .sect3_reco1 .option{
+    font-size: 20px;
+    color: #555;
+}
+
+.section3 .sect3_arr{
+    position: absolute;
+    top: 270%;
+    left: 10%;
+}
+
+.section3 .sect3_arr img{
+    margin-right: 80px;
+}
+
+.section3 .drink1{
+    position: absolute;
+    top: 208%;
+    left: 55%;
+}
+
+.section3 .drink1 img{
+    width: 80%;
+}
+
+.section3 .drink2{
+    position: absolute;
+    top: 209%;
+    left: 90%;
+    /* transform: translateX(-150%); */
+}
+
+.section3 .drink2 img{
+    width: 270%;
+}
+
+/* #section4 */
+
+/* .section4{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+} */
+
+.section4 div{
+    /* width: 200px; */
+    width: 13%;
+    /* height: 300px; */
+    height: 35%;
+    border: 1px solid #222;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+}
+
+.section4 .insta1{
+    top: 330%;
+    left: 18%;
+}
+
+.section4 .insta2{
+    top: 315%;
+    left: 32%;
+}
+
+.section4 .insta3{
+    top: 355%;
+    left: 32%;
+}
+
+.section4 .insta4{
+    top: 320%;
+    left: 46%;
+}
+
+.section4 .insta5{
+    top: 360%;
+    left: 46%;
+}
+
+.section4 .insta6{
+    top: 315%;
+    left: 60%;
+}
+
+.section4 .insta7{
+    top: 355%;
+    left: 60%;
+}
+
+.section4 .insta8{
+    top: 330%;
+    left: 74%;
+}
+
+/* #section5 */
+
+/* .section5{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+} */
+
+.section5 .map{
+    position: absolute;
+    top: 450%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.section5 .map img{
+    width: 80%;
+}
+
+.section5 .foot_logo{
+    position: absolute;
+    top: 420%;
+    left: 60%;
+}
+
+.section5 .foot_logo img{
+    width: 100%;
+}
+
+.section5 .location{
+    font-size: 20px;
+    position: absolute;
+    top: 445%;
+    left: 60%;
+}
+
+.section5 .location p{
+    margin-bottom: 25px;
+}
+
+.section5 .location p span{
+    display: inline-block;
+    width: 150px;
+}
+
+.section5 .info{
+    position: absolute;
+    top: 490%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section5 .info span{
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 17px;
+    color: #444;
+}

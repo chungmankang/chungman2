@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.thank{
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thank p{
+    margin: 40px 0px;
+}
+
+.mail{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.designed{
+    font-size: 18px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foot{
+    font-size: 25px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foot a{
+    margin: 0px 50px;
+}

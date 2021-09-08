@@ -1,0 +1,673 @@
+@charset "UTF-8";
+
+/* ----------공통--------- */
+
+#wrap {
+    width: 100%;
+    /* min-width: 1280px; */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+h2 {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ---------header navi-------- */
+
+header .navi {
+    height: 150px;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 1000;
+}
+
+header nav .navi_1 {
+    position: absolute;
+    z-index: 100;
+    width: 48%;
+}
+
+header nav .navi_2 {
+    position: absolute;
+    z-index: 100;
+    width: 8%;
+    right: 17%;
+}
+
+header .bg_white {
+    width: 100%;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: -310px;
+    transition: all .5s;
+}
+
+header nav:hover~.bg_white {
+    top: 0px;
+}
+
+header .left_menu>li {
+    font-size: 15px;
+    float: left;
+    line-height: 150px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .second_menu>li {
+    font-size: 15px;
+    float: right;
+    line-height: 150px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .sub_menu li a {
+    display: block;
+    width: 120px;
+    line-height: 50px;
+    font-weight: normal;
+    background-color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+header .over{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+header .sub_menu {
+    position: absolute;
+    top: -200px;
+    z-index: 100;
+    transition: all .5s;
+}
+
+header .left_menu:hover .sub_menu,
+header .second_menu:hover .sub_menu {
+    top: 0px;
+}
+
+header .right_menu {
+    line-height: 150px;
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+}
+
+header .right_menu .icon {
+    float: left;
+    margin-right: 30px;
+}
+
+header .right_menu .icon:hover img {
+    width: 150%;
+}
+
+header nav .sub_menu .under {
+    padding-bottom: 3px;
+    border-bottom: 2px solid rgba(138, 196, 121, 0);
+    transition: all 0.5s;
+}
+
+header nav .sub_menu li a:hover .under {
+    border-bottom: 2px solid rgba(138, 196, 121, 1);
+}
+
+/* -----------header main slide------------ */
+
+header .main_slide {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+header .main_slide .arrow_left {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+header .main_slide .arrow_left>img {
+    width: 100%;
+}
+
+header .main_slide .arrow_right {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+header .main_slide .arrow_right>img {
+    width: 100%;
+}
+
+header .main_slide input {
+    display: none;
+}
+
+header .main_slide .page_position {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    z-index: 1000;
+}
+
+header .main_slide .page_position label {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: inline-block;
+}
+
+header .main_slide input[id=page_1]:checked~.page_position label[for=page_1],
+header .main_slide input[id=page_2]:checked~.page_position label[for=page_2],
+header .main_slide input[id=page_3]:checked~.page_position label[for=page_3] {
+    background-color: #fff;
+}
+
+header .main_slide .slide {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+}
+
+header .main_slide input[id=page_1]:checked~.slide {
+    left: 0;
+}
+
+header .main_slide input[id=page_2]:checked~.slide {
+    left: -100%;
+}
+
+header .main_slide input[id=page_3]:checked~.slide {
+    left: -200%;
+}
+
+header .main_slide .move {
+    visibility: hidden;
+}
+
+header .main_slide input[id=page_1]:checked~.move .move_1,
+header .main_slide input[id=page_2]:checked~.move .move_2,
+header .main_slide input[id=page_3]:checked~.move .move_3 {
+    visibility: visible;
+}
+
+header .main_slide .slide01 {
+    background: url(../images/mainpage/main_slide01.png) no-repeat;
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    background-position: center;
+}
+
+header .main_slide .slide02 {
+    background: url(../images/mainpage/main_slide02.png) no-repeat;
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    background-position: center;
+}
+
+header .main_slide .slide03 {
+    background: url(../images/mainpage/main_slide03.png) no-repeat;
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    background-position: center;
+}
+
+
+/* ---------main section_1-------- */
+
+#section_1 {
+    height: 960px;
+}
+
+#section_1 .section_1_main {
+    position: relative;
+    height: 716px;
+    color: #111;
+    font-size: 30px;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+}
+
+#section_1 .section_1_main .section_1_main_2{
+    color: #fff;
+    text-shadow: 3px 3px 20px #111;
+}
+
+#section_1 .section_1_main .section_1_more .section_1_bo .white_bo{
+    border: 2px solid #fff;
+}
+
+#section_1 .section_1_main .section_1_more {
+    position: absolute;
+    top: 60%;
+    left: 105px;
+}
+
+#section_1 .section_1_main .section_1_more .section_1_bar {
+    width: 70px;
+    height: 10px;
+    background-color: #111;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#section_1 .section_1_main .section_1_more .white_bar{
+    background-color: #fff;
+}
+
+#section_1 .section_1_main .section_1_more p {
+    margin-bottom: 20px;
+}
+
+#section_1 .section_1_main .section_1_more .section_1_bo a {
+    border: 2px solid #111;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#section_1 .section_1_main ul li {
+    position: absolute;
+    opacity: 0;
+    transition: all .5s;
+    width: 100%;
+}
+
+#section_1 .section_1_main ul li img{
+    width: 100%;
+}
+
+#section_1 .section_1_main input {
+    display: none;
+}
+
+#section_1 .section_1_main .new_move_1,
+#section_1 .section_1_main .new_move_2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+#section_1 .section_1_main .new_left {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+#section_1 .section_1_main .new_left img {
+    width: 100%;
+}
+
+#section_1 .section_1_main .new_right {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+#section_1 .section_1_main .new_right img {
+    width: 100%;
+}
+
+#section_1 .section_1_main input[id=new_1]:checked~.new_move_1,
+#section_1 .section_1_main input[id=new_2]:checked~.new_move_2 {
+    display: block;
+}
+
+#section_1 .section_1_main input[id=new_1]:checked~ul .section_1_main_1,
+#section_1 .section_1_main input[id=new_2]:checked~ul .section_1_main_2 {
+    opacity: 1;
+}
+
+/* -----------main section_2---------- */
+
+#section_2 {
+    width: 100%;
+    height: 960px;
+    background-color: rgba(138, 196, 121, 0.1);
+    position: relative;
+}
+
+#section_2 article {
+    width: 100%;
+    height: 533px;
+}
+
+#section_2 article .article_1 {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 610px;
+}
+
+#section_2 article .article_1 img{
+    width: 100%;
+}
+
+#section_2 article .article_2 {
+    width: 610px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#section_2 article .article_2 img{
+    width: 100%;
+}
+
+#section_2 article .article_1 .white_desk {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(2, 2, 2, 0.8);
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    bottom: -263px;
+    transition: all .5s;
+}
+
+#section_2 article .article_1 .white_desk .white_info {
+    position: absolute;
+    bottom: 70px;
+    left: 50px;
+}
+
+#section_2 article .article_bar {
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+#section_2 article .price {
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+#section_2 article .article_2 .black_desk {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(2, 2, 2, 0.8);
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    bottom: -263px;
+    transition: all .5s;
+}
+
+#section_2 article .article_2 .black_desk .black_info {
+    position: absolute;
+    bottom: 70px;
+    left: 50px;
+}
+
+#section_2 article .article_bar {
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+#section_2 article .article_1:hover .white_desk,
+#section_2 article .article_2:hover .black_desk {
+    bottom: 0;
+}
+
+#section_2 .section_2_more {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#section_2 .section_2_more a:hover img {
+    width: 5%;
+}
+
+/* ------------main section_3------------ */
+
+#section_3 .center {
+    text-align: center;
+}
+
+#section_3 .section_3_menu {
+    font-size: 20px;
+    display: inline-block;
+}
+
+#section_3 .section_3_menu li {
+    float: left;
+    margin: 0px 50px;
+    margin-bottom: 50px;
+}
+
+#section_3 .section_3_menu li span {
+    border-bottom: 2px solid rgba(138, 196, 121, 0);
+    padding-bottom: 5px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+#section_3 .section_3_contents{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+#section_3 .section_3_contents li {
+    float: left;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    width: calc((100% - 60px) / 4);
+}
+
+#section_3 .section_3_contents li img{
+    width: 100%;
+}
+
+#section_3 .section_3_contents li:last-child{
+    margin-right: 0;
+}
+
+#section_3 .section_3_contents .black_2 {
+    width: 295px;
+    height: 150px;
+    background-color: rgba(2, 2, 2, .6);
+    position: absolute;
+    top: 410px;
+    transition: all .5s;
+}
+
+#section_3 .section_3_contents .black_2 .section_3_bar{
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#section_3 .section_3_contents .black_2 .section_3_text{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#section_3 .section_3_contents .black_2 .section_3_price{
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+#section_3 .section_3_contents li:hover .black_2{
+    top: 260px;
+}
+
+input{
+    display: none;
+}
+
+.section_3_contents{
+    display: none;
+}
+
+#section_3 input[id=chair]:checked ~ .contents_2, 
+#section_3 input[id=desk]:checked ~ .contents_1, 
+#section_3 input[id=book]:checked ~ .contents_3, 
+#section_3 input[id=parti]:checked ~ .contents_4, 
+#section_3 input[id=table]:checked ~ .contents_5{
+    display: block;
+}
+
+#section_3 input[id=chair]:checked ~ .center .chair, 
+#section_3 input[id=desk]:checked ~ .center .desk, 
+#section_3 input[id=book]:checked ~ .center .book, 
+#section_3 input[id=parti]:checked ~ .center .parti, 
+#section_3 input[id=table]:checked ~ .center .table{
+    border-bottom: 2px solid rgba(138, 196, 121, 1)
+}
+
+/* -----------footer------------ */
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    color: #fff;
+    padding-top: 18px;
+}
+
+footer .add{
+    margin-right: 30px;
+}
+
+footer .rep_1{
+    margin-right: 15px;
+}
+
+footer .rep_2{
+    margin-right: 20px;
+}
+
+/* -----------aside------------- */
+
+aside .top a{
+width: 100px;
+height: 100px;
+background-color: rgba(138, 196, 121, 1);
+position: fixed;
+bottom: 10px;
+right: 10px;
+color: #fff;
+text-align: center;
+line-height: 100px;
+font-size: 20px;
+z-index: 100000;
+}
+
+aside .popup{
+    width: 400px;
+    height: 250px;
+    background-color: #fff;
+    z-index: 100000;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+    visibility: visible;
+    color: rgb(5, 5, 5);
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(219, 241, 136);
+}
+
+aside .popup .caution{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+aside .popup .pop{
+    margin-bottom: 20px;
+}
+
+aside .popup .sub_{
+    margin-bottom: 15px;
+    color: rgb(190, 48, 38);
+    font-weight: bold;
+}
+
+aside input{
+    display: none;
+}
+
+aside .popup label{
+margin-left: 320px;
+}
+
+aside .popup label span{
+    cursor: pointer;
+}
+
+aside input[id=btn]:checked ~ .popup{
+    visibility: hidden;
+}

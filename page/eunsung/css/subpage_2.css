@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+/* ----------공통--------- */
+
+#wrap {
+    width: 100%;
+    /* min-width: 1280px; */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------header navi-------- */
+
+header .navi {
+    height: 150px;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 1000;
+}
+
+header nav .navi_1 {
+    position: absolute;
+    z-index: 100;
+    width: 48%;
+}
+
+header nav .navi_2 {
+    position: absolute;
+    z-index: 100;
+    width: 8%;
+    right: 17%;
+}
+
+header .bg_white {
+    width: 100%;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: -310px;
+    transition: all .5s;
+}
+
+header nav:hover~.bg_white {
+    top: 0px;
+}
+
+header .left_menu>li {
+    font-size: 15px;
+    float: left;
+    line-height: 150px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .second_menu>li {
+    font-size: 15px;
+    float: right;
+    line-height: 150px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .sub_menu li a {
+    display: block;
+    width: 120px;
+    line-height: 50px;
+    font-weight: normal;
+    background-color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+header .over{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+header .sub_menu {
+    position: absolute;
+    top: -200px;
+    z-index: 100;
+    transition: all .5s;
+}
+
+header .left_menu:hover .sub_menu,
+header .second_menu:hover .sub_menu {
+    top: 0px;
+}
+
+header .right_menu {
+    line-height: 150px;
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+}
+
+header .right_menu .icon {
+    float: left;
+    margin-right: 30px;
+}
+
+header .right_menu .icon:hover img {
+    width: 150%;
+}
+
+header nav .sub_menu .under {
+    padding-bottom: 3px;
+    border-bottom: 2px solid rgba(138, 196, 121, 0);
+    transition: all 0.5s;
+}
+
+header nav .sub_menu li a:hover .under {
+    border-bottom: 2px solid rgba(138, 196, 121, 1);
+}
+
+/* ----------main section_1_left---------- */
+
+#section_1 {
+    margin-top: 50px;
+    margin-bottom: 200px;
+    width: 100%;
+    height: 667px;
+}
+
+#section_1 .section_1_left {
+    width: 610px;
+    height: 667px;
+    float: left;
+}
+
+.section_1_left ul {
+    width: 100%;
+    height: 167px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.section_1_left ul li {
+    width: calc(100% / 3);
+    float: left;
+}
+
+.section_1_left li p {
+    font-weight: bold;
+    margin: 30px 0px
+}
+
+.section_1_left li span {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #222;
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(211, 139, 6);
+}
+
+/* --------main .section_1_right---------- */
+
+#section_1 .section_1_right {
+    width: 545px;
+    height: 667px;
+    float: right;
+}
+
+.section_1_right li:first-child {
+    border-top: 2px solid #222;
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+.section_1_right li .heart {
+    float: right;
+}
+
+.section_1_right li:nth-child(2) {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px 0px;
+    border-bottom: 1px solid #222;
+}
+
+.section_1_right li:nth-child(3) {
+    margin-top: 30px;
+}
+
+.section_1_right li:nth-child(5) {
+    margin-top: 30px;
+}
+
+.section_1_right li:nth-child(3),
+.section_1_right li:nth-child(4),
+.section_1_right li:nth-child(5),
+.section_1_right li:nth-child(6) {
+    padding: 20px 0px;
+    font-size: 20px;
+}
+
+.section_1_right li:nth-child(3)>label,
+.section_1_right li:nth-child(4)>label {
+    float: right;
+}
+
+.section_1_right li:nth-child(3)>label select,
+.section_1_right li:nth-child(4)>label select {
+    width: 300px;
+}
+
+input {
+    display: none;
+}
+
+.section_1_right .number {
+    width: 300px;
+    /* height: 30px; */
+    float: right;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.section_1_right .number div {
+    border: 1px solid #222;
+    display: none;
+}
+
+.section_1_right .number .count {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+}
+
+.section_1_right .number .minus,
+.section_1_right .number .add {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.section_1_right .number_1,
+.section_1_right .number_2,
+.section_1_right .number_3 {
+    position: absolute;
+    right: 0;
+}
+
+.section_1_right input[id=num_1]:checked~.number .number_1,
+.section_1_right input[id=num_2]:checked~.number .number_2,
+.section_1_right input[id=num_3]:checked~.number .number_3 {
+    display: block;
+}
+
+.section_1_right .total {
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #222;
+}
+
+.section_1_right li:nth-child(5) p {
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    font-size: 25px;
+}
+
+.section_1_right .sum {
+    width: 300px;
+    font-size: 40px;
+}
+
+.section_1_right .total label {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    display: none;
+}
+
+.section_1_right input[id=num_1]:checked~.total .sum label[for=num_1],
+.section_1_right input[id=num_2]:checked~.total .sum label[for=num_2],
+.section_1_right input[id=num_3]:checked~.total .sum label[for=num_3] {
+    display: block;
+}
+
+.section_1_right .shop {
+    display: inline-block;
+    width: 256px;
+    height: 50px;
+    font-size: 25px;
+    margin-right: 24px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.section_1_right .buy {
+    display: inline-block;
+    width: 256px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid rgb(135, 247, 113);
+    background-color: rgb(135, 247, 113);
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* -------------main section_2 ------------ */
+
+#section_2 {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+#section_2 h1 {
+    text-align: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 20px 0px;
+    margin-bottom: 200px;
+}
+
+/* -----------footer------------ */
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #555;
+    color: #fff;
+    padding-top: 18px;
+}
+
+footer .add {
+    margin-right: 30px;
+}
+
+footer .rep_1 {
+    margin-right: 15px;
+}
+
+footer .rep_2 {
+    margin-right: 20px;
+}
+
+/* -----------aside------------- */
+
+aside .top a {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(138, 196, 121, 1);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    z-index: 100000;
+}
